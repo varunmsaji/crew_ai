@@ -7,7 +7,7 @@ class Meeting_prep_agents():
         return Agent(
             role = "research specialist",
             goal ='conduct thorough research on people and companies involved in the meeting',
-            tools =Exa_search_tool_set.tools,
+            tools =Exa_search_tool_set.tools(),
             backstory = dedent("""\
             As a research specialist,your mission is to uncover detailed information
             about the individual and entities participating in the meeting .Yor insights
@@ -19,7 +19,7 @@ class Meeting_prep_agents():
         return Agent(
             role = 'Industry Analysis',
             goal = 'Analysis the current industry trends,challenges and oppertunities',
-            tools = Exa_search_tool_set.tools,
+            tools = Exa_search_tool_set.tools(),
             backstory = dedent("""\
             As an industry Analyst ,your analysis will identify key trends
             challenges facing  the industry, and potential oppertunities that 
@@ -40,7 +40,7 @@ class Meeting_prep_agents():
         return Agent(
             role = 'Breifing coordinator',
             goal = 'Compile all gathered information into concise,informative briefing document',
-            bakstory = dedent("""\
+            backstory = dedent("""\
             As the briefing coordinator,your role is to consolidate the research,
             analysis ,and strategic insights"""),
             verbose = True
